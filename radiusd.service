@@ -7,8 +7,6 @@ After=docker.service
 ExecStartPre=-/usr/bin/docker rm radiusd.service
 ExecStart=/usr/bin/docker run --rm \
   --name radiusd.service -h radius \
-  -v /dev/log:/dev/log \
-  -v /srv/radiusd/freeradius:/etc/freeradius \
   -v /srv/radiusd/raddb:/etc/raddb \
   -p 1812-1813:1812-1813/udp -p 1812-1813:1812-1813 \
   scottylogan/rpi-radiusd /usr/sbin/radiusd -f
