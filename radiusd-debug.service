@@ -11,7 +11,7 @@ ExecStart=/usr/bin/docker run --rm \
   -v /srv/radiusd/freeradius:/etc/freeradius \
   -v /srv/radiusd/raddb:/etc/raddb \
   -p 1812-1813:1812-1813/udp -p 1812-1813:1812-1813 \
-  rpi-radiusd /usr/sbin/radiusd -X
+  scottylogan/rpi-radiusd /usr/sbin/radiusd -X
 ExecStop=/usr/bin/docker stop radiusd.service
 RestartSec=5
 Restart=always
