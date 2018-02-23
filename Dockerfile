@@ -1,8 +1,7 @@
 FROM scottylogan/rpi-centos7
 MAINTAINER Scotty Logan <swl@stanford.edu>
 
-RUN yum -y install freeradius freeradius-utils \
-  freeradius-krb5 freeradius-ldap freeradius-mysql freeradius-postgresql freeradius-python
+RUN yum -y install freeradius freeradius-utils
 
 VOLUME /etc/raddb
 
