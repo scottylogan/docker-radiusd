@@ -1,4 +1,3 @@
-FROM scottylogan/rpi-centos7
 LABEL maintainer "Scotty Logan <swl@stanford.edu>"
 
 RUN yum -y install freeradius freeradius-utils
